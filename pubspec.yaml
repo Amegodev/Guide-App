@@ -1,0 +1,87 @@
+---
+name: prank_app
+description: A new Prank  application with Flutter.
+publish_to: none
+version: 1.0.0+1
+environment:
+  sdk: '>=2.7.0 <3.0.0'
+
+##########################
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.3
+  package_info: ^0.4.1
+  flutter_widget_from_html: ^0.4.2
+  toast: ^0.1.5
+  bordered_text: ^1.0.0
+  tinycolor: ^1.0.2
+  confetti: ^0.5.2
+  percent_indicator: ^2.1.5
+  flutter_inappwebview: ^4.0.0+4
+  timer_count_down: ^1.0.4+1
+  page_slider: ^0.0.2
+  getwidget: ^1.2.4
+  path_provider:
+
+  #Essentiel plugins
+  device_info: ^1.0.0
+  flutter_svg: ^0.18.0
+  share:
+  url_launcher: ^5.5.0
+
+  #Ads plugins
+#  facebook_audience_network: ^0.9.0
+  unity_ads_plugin:
+#  startapp: ^0.5.1
+
+  flutter_ironsource_x:
+    git:
+      url: https://github.com/Hakim-Allaoui/flutter_ironsource_x
+  mopub_flutter: ^1.2.2+1
+
+  #Push NotificationPlugin
+  # onesignal_flutter:
+
+
+##########################
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  logger: ^0.9.4
+  flutter_launcher_icons: #flutter pub get & flutter pub run flutter_launcher_icons:main
+  flutter_launcher_name: #flutter pub get & flutter pub run flutter_launcher_name:main
+
+
+##########################
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"
+
+flutter_launcher_name:
+  name: "FNF music Pro Minecraft mod"
+
+##########################
+flutter:
+  uses-material-design: true
+  assets:
+  - assets/
+  - assets/icons/
+  - assets/fonts/
+
+
+##########################
+  fonts:
+  - family: Montserrat
+    fonts:
+    - asset: assets/fonts/Montserrat-Regular.otf
+    - asset: assets/fonts/Montserrat-Thin.otf
+      weight: 100
+    - asset: assets/fonts/Montserrat-Medium.otf
+      weight: 500
+    - asset: assets/fonts/Montserrat-Bold.otf
+      weight: 700
+  - family: SuezOne
+    fonts:
+    - asset: assets/fonts/SuezOne-Regular.ttf
