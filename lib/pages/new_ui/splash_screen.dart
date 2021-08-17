@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:prank_app/utils/navigator.dart';
-import 'package:prank_app/utils/theme.dart';
-import 'package:prank_app/utils/tools.dart';
+import 'package:guide_app/utils/navigator.dart';
+import 'package:guide_app/utils/theme.dart';
+import 'package:guide_app/utils/tools.dart';
 
 class NewSplashScreen extends StatefulWidget {
   @override

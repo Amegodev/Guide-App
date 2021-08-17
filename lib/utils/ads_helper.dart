@@ -1,8 +1,8 @@
 // /*
 // import 'package:flutter/foundation.dart';
-// import 'package:prank_app/utils/ads.dart';
-// import 'package:prank_app/utils/theme.dart';
-// import 'package:prank_app/utils/tools.dart';
+// import 'package:guide_app/utils/ads.dart';
+// import 'package:guide_app/utils/theme.dart';
+// import 'package:guide_app/utils/tools.dart';
 // import 'package:facebook_audience_network/facebook_audience_network.dart';
 // import 'package:facebook_audience_network/facebook_audience_network.dart' as fb;
 // import 'package:native_admob_flutter/native_admob_flutter.dart';

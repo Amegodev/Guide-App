@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:prank_app/pages/about_page.dart';
-import 'package:prank_app/pages/cards_page.dart';
-import 'package:prank_app/pages/content.dart';
-import 'package:prank_app/pages/counter_page.dart';
-import 'package:prank_app/pages/hashtags_page.dart';
-import 'package:prank_app/pages/home_page.dart';
-import 'package:prank_app/pages/more_apps.dart';
-import 'package:prank_app/pages/new_ui/content_page.dart';
-import 'package:prank_app/pages/new_ui/enter_yr_name.dart';
-import 'package:prank_app/pages/new_ui/list_guide.dart';
-import 'package:prank_app/pages/new_ui/notice_page.dart';
-import 'package:prank_app/pages/new_ui/play_page.dart';
-import 'package:prank_app/pages/new_ui/select_platform.dart';
-import 'package:prank_app/pages/new_ui/start_page.dart';
-import 'package:prank_app/pages/username_page.dart';
-import 'package:prank_app/pages/one_more_step_page.dart';
-import 'package:prank_app/pages/privacy_policy_page.dart';
+import 'package:guide_app/pages/about_page.dart';
+import 'package:guide_app/pages/cards_page.dart';
+import 'package:guide_app/pages/content.dart';
+import 'package:guide_app/pages/counter_page.dart';
+import 'package:guide_app/pages/hashtags_page.dart';
+import 'package:guide_app/pages/home_page.dart';
+import 'package:guide_app/pages/more_apps.dart';
+import 'package:guide_app/pages/new_ui/content_page.dart';
+import 'package:guide_app/pages/new_ui/enter_yr_name.dart';
+import 'package:guide_app/pages/new_ui/list_guide.dart';
+import 'package:guide_app/pages/new_ui/notice_page.dart';
+import 'package:guide_app/pages/new_ui/play_page.dart';
+import 'package:guide_app/pages/new_ui/select_platform.dart';
+import 'package:guide_app/pages/new_ui/start_page.dart';
+import 'package:guide_app/pages/username_page.dart';
+import 'package:guide_app/pages/one_more_step_page.dart';
+import 'package:guide_app/pages/privacy_policy_page.dart';
 
 
 class CustomNavigator {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:prank_app/utils/ads_networks/ironsource.dart';
-import 'package:prank_app/utils/ads_networks/mopub.dart';
-import 'package:prank_app/utils/ads_networks/unity.dart';
+import 'package:guide_app/utils/ads_networks/ironsource.dart';
+import 'package:guide_app/utils/ads_networks/mopub.dart';
+import 'package:guide_app/utils/ads_networks/unity.dart';
 
 class Ads {
   static String adNetwork = "mopub";

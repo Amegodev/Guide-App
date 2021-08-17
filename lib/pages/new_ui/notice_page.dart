@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:prank_app/utils/ads.dart';
-import 'package:prank_app/utils/navigator.dart';
-import 'package:prank_app/utils/theme.dart';
-import 'package:prank_app/utils/tools.dart';
-import 'package:prank_app/widgets/custom_header.dart';
-import 'package:prank_app/widgets/widgets.dart';
+import 'package:guide_app/utils/ads.dart';
+import 'package:guide_app/utils/navigator.dart';
+import 'package:guide_app/utils/theme.dart';
+import 'package:guide_app/utils/tools.dart';
+import 'package:guide_app/widgets/custom_header.dart';
+import 'package:guide_app/widgets/widgets.dart';
 
 class NoticePage extends StatefulWidget {
   @override

@@ -1,6 +1,6 @@
-/* import 'package:prank_app/constants.dart';
+/* import 'package:guide_app/constants.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
-import 'package:prank_app/utils/tools.dart';
+import 'package:guide_app/utils/tools.dart';
 
 class OneSignalHelper {
   static Future<void> initOneSignal() async {

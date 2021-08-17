@@ -1,4 +1,4 @@
-import 'package:prank_app/utils/tools.dart';
+import 'package:guide_app/utils/tools.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:unity_ads_plugin/ad/unity_banner_ad.dart';

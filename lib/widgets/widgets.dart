@@ -1,11 +1,11 @@
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:prank_app/utils/navigator.dart';
-import 'package:prank_app/constants.dart';
-import 'package:prank_app/utils/theme.dart';
-import 'package:prank_app/utils/tools.dart';
-import 'package:prank_app/widgets/dialogs.dart';
+import 'package:guide_app/utils/navigator.dart';
+import 'package:guide_app/constants.dart';
+import 'package:guide_app/utils/theme.dart';
+import 'package:guide_app/utils/tools.dart';
+import 'package:guide_app/widgets/dialogs.dart';
 import 'package:tinycolor/tinycolor.dart';
 
 class CustomAppBar extends StatelessWidget {

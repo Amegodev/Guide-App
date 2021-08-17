@@ -44,7 +44,7 @@ android {
 
     defaultConfig {
         multiDexEnabled true
-        applicationId "com.sausageman.battlegroundguide"
+        applicationId "com.tentaclelock.androidguide"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()

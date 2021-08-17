@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:prank_app/pages/new_ui/splash_screen.dart';
-import 'package:prank_app/utils/navigator.dart';
-import 'package:prank_app/utils/tools.dart';
+import 'package:guide_app/pages/new_ui/splash_screen.dart';
+import 'package:guide_app/utils/navigator.dart';
+import 'package:guide_app/utils/tools.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

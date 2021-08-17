@@ -1,4 +1,4 @@
-import 'package:prank_app/utils/theme.dart';
+import 'package:guide_app/utils/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

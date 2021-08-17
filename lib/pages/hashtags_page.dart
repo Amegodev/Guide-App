@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-// import 'package:prank_app/utils/ads_helper.dart';
-import 'package:prank_app/utils/ads.dart';
-import 'package:prank_app/utils/navigator.dart';
-import 'package:prank_app/constants.dart';
-import 'package:prank_app/utils/theme.dart';
-import 'package:prank_app/utils/tools.dart';
-import 'package:prank_app/widgets/widgets.dart';
+// import 'package:guide_app/utils/ads_helper.dart';
+import 'package:guide_app/utils/ads.dart';
+import 'package:guide_app/utils/navigator.dart';
+import 'package:guide_app/constants.dart';
+import 'package:guide_app/utils/theme.dart';
+import 'package:guide_app/utils/tools.dart';
+import 'package:guide_app/widgets/widgets.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 import 'package:toast/toast.dart';
 

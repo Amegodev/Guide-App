@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ironsource_x/ironsource.dart';
 import 'package:flutter_ironsource_x/models.dart';
 import 'package:mopub_flutter/mopub_interstitial.dart';
-import 'package:prank_app/utils/tools.dart';
+import 'package:guide_app/utils/tools.dart';
 import 'package:mopub_flutter/mopub_rewarded.dart';
 
 class IronSourceHelper with WidgetsBindingObserver {

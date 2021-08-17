@@ -1,4 +1,4 @@
-import 'package:prank_app/utils/tools.dart';
+import 'package:guide_app/utils/tools.dart';
 
 List<int> listPoints = [0, 1, 100, 200, 300, 400, 500, 600, 700, 800, 900, 999];
 
@@ -26,7 +26,7 @@ class Constants {
   static final String storeId = ""; //TODO : Store ID
   static final String storeName = "HVKIM Inc.";
   static final String storeLabel = "AmegoDev .Inc";
-  static dynamic featuredApps = "";
+  static dynamic featuredApps;
 
   static final String privacyText = """
 <p class=MsoNormal style='margin-top:0cm;margin-right:86.8pt;margin-bottom:

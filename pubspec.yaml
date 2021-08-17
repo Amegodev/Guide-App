@@ -1,5 +1,5 @@
 ---
-name: prank_app
+name: guide_app
 description: A new Prank  application with Flutter.
 publish_to: none
 version: 1.0.0+1
@@ -50,7 +50,6 @@ dev_dependencies:
     sdk: flutter
   logger: ^0.9.4
   flutter_launcher_icons: #flutter pub get & flutter pub run flutter_launcher_icons:main
-  flutter_launcher_name: #flutter pub get & flutter pub run flutter_launcher_name:main
 
 
 ##########################
@@ -59,8 +58,6 @@ flutter_icons:
   ios: true
   image_path: "assets/icon.png"
 
-flutter_launcher_name:
-  name: "FNF music Pro Minecraft mod"
 
 ##########################
 flutter:

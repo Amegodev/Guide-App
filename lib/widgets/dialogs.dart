@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:prank_app/constants.dart';
-import 'package:prank_app/utils/theme.dart';
-import 'package:prank_app/utils/tools.dart';
+import 'package:guide_app/constants.dart';
+import 'package:guide_app/utils/theme.dart';
+import 'package:guide_app/utils/tools.dart';
 import 'package:toast/toast.dart';
 
 class RatingDialog extends StatefulWidget {

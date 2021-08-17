@@ -1,4 +1,4 @@
-package com.sausageman.battlegroundguide
+package com.tentaclelock.androidguide
 
 import io.flutter.embedding.android.FlutterActivity
 

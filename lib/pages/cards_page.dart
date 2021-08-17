@@ -4,13 +4,13 @@ import 'dart:math';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 
-// import 'package:prank_app/utils/ads_helper.dart';
-import 'package:prank_app/utils/ads.dart';
-import 'package:prank_app/utils/navigator.dart';
-import 'package:prank_app/constants.dart';
-import 'package:prank_app/utils/theme.dart';
-import 'package:prank_app/widgets/animated_counter.dart';
-import 'package:prank_app/widgets/widgets.dart';
+// import 'package:guide_app/utils/ads_helper.dart';
+import 'package:guide_app/utils/ads.dart';
+import 'package:guide_app/utils/navigator.dart';
+import 'package:guide_app/constants.dart';
+import 'package:guide_app/utils/theme.dart';
+import 'package:guide_app/widgets/animated_counter.dart';
+import 'package:guide_app/widgets/widgets.dart';
 import 'package:toast/toast.dart';
 
 class CardsPage extends StatefulWidget {

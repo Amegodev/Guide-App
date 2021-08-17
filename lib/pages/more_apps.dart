@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:prank_app/constants.dart';
-import 'package:prank_app/utils/theme.dart';
+import 'package:guide_app/constants.dart';
+import 'package:guide_app/utils/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MoreApps extends StatefulWidget {

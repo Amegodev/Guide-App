@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mopub_flutter/mopub_interstitial.dart';
-import 'package:prank_app/utils/tools.dart';
+import 'package:guide_app/utils/tools.dart';
 import 'package:mopub_flutter/mopub.dart';
 import 'package:mopub_flutter/mopub_banner.dart';
 import 'package:mopub_flutter/mopub_rewarded.dart';
@@ -9,9 +9,9 @@ class MopubHelper {
   //TODO: ⚠ Change the testMode to false
   static final bool testMode = false;
 
-  static String bannerAdUnit = "0cd269d3e7cc43f99078c9d19a628ff1";
-  static String interAdUnit = "eacc313413af45d2a80c9fac2bc261c2";
-  static String rewardAdUnit = "dae0325ba5ec4df288c8832f0253a943";
+  static String bannerAdUnit = "c346fe32743441f38bad45d32e75a381";
+  static String interAdUnit = "20b25863f55a488bb24b47c1289ac7a7";
+  static String rewardAdUnit = "5f344e8a7d674aa6b23871a31709be24";
 
   MoPubRewardedVideoAd rewardAd;
   MoPubInterstitialAd interstitialAd;
@@ -37,7 +37,7 @@ class MopubHelper {
     interstitialAd = MoPubInterstitialAd(
       interAdUnit,
       (result, args) {
-        Tools.logger.i('Mopub Interstitial $result');
+        Tools.logger.i('Mopub Interstitial $result\nargs: $args');
       },
       reloadOnClosed: true,
     );

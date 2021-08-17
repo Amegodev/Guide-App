@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:prank_app/utils/theme.dart';
+import 'package:guide_app/utils/theme.dart';
 
 class AnimatedFlipCounter extends StatelessWidget {
   final int value;

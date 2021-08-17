@@ -8,17 +8,17 @@ import 'package:device_info/device_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:prank_app/articles.dart';
-import 'package:prank_app/constants.dart';
+import 'package:guide_app/articles.dart';
+import 'package:guide_app/constants.dart';
 import 'package:package_info/package_info.dart';
-import 'package:prank_app/models/content_model.dart';
-import 'package:prank_app/utils/ads.dart';
-import 'package:prank_app/utils/ads_networks/mopub.dart';
+import 'package:guide_app/models/content_model.dart';
+import 'package:guide_app/utils/ads.dart';
+import 'package:guide_app/utils/ads_networks/mopub.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
 
 import 'ads_networks/ironsource.dart';
-// import 'package:prank_app/utils/plugins/one_signal.dart';
+// import 'package:guide_app/utils/plugins/one_signal.dart';
 
 class Tools {
   static double height = 781.0909090909091;
@@ -87,45 +87,71 @@ class Tools {
         if (response.statusCode == 200) {
           var values = json.decode(response.body);
           Tools.logger.i(values);
-          articles.clear();
 
-          //get Data
-          Constants.featuredApps =
-              values["featured_apps"];
-          Constants.trafficText =
-              values[Tools.packageInfo.packageName]["traffic_text"];
-          Constants.trafficUrl =
-              values[Tools.packageInfo.packageName]["traffic_url"];
-          Constants.inAppBrowser = values[Tools.packageInfo.packageName]
-                          ["in_app_browser"]
-                      .toString()
-                      .toLowerCase() ==
-                  "true"
-              ? true
-              : false;
-          Constants.onlineArticles = values[Tools.packageInfo.packageName]
-                          ["online_articles"]
-                      .toString()
-                      .toLowerCase() ==
-                  "true"
-              ? true
-              : false;
-          bool onlineAds = values[Tools.packageInfo.packageName]
-                          ["online_ads"]
-                      .toString()
-                      .toLowerCase() ==
-                  "true"
-              ? true
-              : false;
-          Ads.adNetwork = values[Tools.packageInfo.packageName]["ads_mode"];
+          String app = values[Tools.packageInfo.packageName] ?? "default";
+          Tools.logger.wtf("app: $app");
 
-          //Fill articles
-          if (Constants.onlineArticles) {
-            articles = List<ContentModel>.from(
-              values[Tools.packageInfo.packageName]["articles"]
-                  .map((e) => ContentModel.fromJson(e)),
-            );
+          if (app != "default") {
+            Constants.onlineArticles =
+                values[app]["online_articles"].toString().toLowerCase() ==
+                        "true"
+                    ? true
+                    : false;
+
+            //Fill articles
+            articles.clear();
+            if (Constants.onlineArticles) {
+              articles = List<ContentModel>.from(
+                values[app]["articles"].map((e) => ContentModel.fromJson(e)),
+              );
+            } else {
+              for (int i = 0; i < offlineArticles.length; i++) {
+                ContentModel item = new ContentModel(
+                  title: offlineTitles[i],
+                  imageUrl: "",
+                  content: offlineArticles[i],
+                );
+                articles.add(item);
+              }
+            }
+            Tools.logger.wtf("Article length :${articles.length}");
+
+            //get Data
+            Constants.featuredApps = values["featured_apps"];
+            Constants.trafficText = values[app]["traffic_text"];
+            Constants.trafficUrl = values[app]["traffic_url"];
+            Constants.inAppBrowser =
+                values[app]["in_app_browser"].toString().toLowerCase() == "true"
+                    ? true
+                    : false;
+            bool onlineAds =
+                values[app]["online_ads"].toString().toLowerCase() == "true"
+                    ? true
+                    : false;
+
+            Ads.adNetwork = values[app]["ads_mode"];
+
+            if (onlineAds) {
+              if (Ads.adNetwork == "mopub") {
+                MopubHelper.bannerAdUnit =
+                    values[app]["ads"][Ads.adNetwork]["banner"];
+                MopubHelper.interAdUnit =
+                    values[app]["ads"][Ads.adNetwork]["Inter"];
+                MopubHelper.rewardAdUnit =
+                    values[app]["ads"][Ads.adNetwork]["reward"];
+              }
+              Tools.logger.i(
+                  "Banner: ${MopubHelper.bannerAdUnit}\nInter: ${MopubHelper.interAdUnit}\nReward: ${MopubHelper.rewardAdUnit}");
+
+              if (Ads.adNetwork == "ironsource") {
+                IronSourceHelper.IRONSOURCE_APP_KEY =
+                    values[app]["ads"][Ads.adNetwork]["app_key"];
+              }
+              Tools.logger
+                  .i("IrSource AppKey: ${IronSourceHelper.IRONSOURCE_APP_KEY}");
+            }
           } else {
+            articles.clear();
             for (int i = 0; i < offlineArticles.length; i++) {
               ContentModel item = new ContentModel(
                 title: offlineTitles[i],
@@ -135,33 +161,29 @@ class Tools {
               articles.add(item);
             }
           }
-          Tools.logger.wtf("Article length :${articles.length}");
-
-          if (onlineAds) {
-            if (Ads.adNetwork == "mopub") {
-              MopubHelper.bannerAdUnit = values[Tools.packageInfo.packageName]
-                  ["ads"][Ads.adNetwork]["banner"];
-              MopubHelper.interAdUnit = values[Tools.packageInfo.packageName]
-                  ["ads"][Ads.adNetwork]["Inter"];
-              MopubHelper.rewardAdUnit = values[Tools.packageInfo.packageName]
-                  ["ads"][Ads.adNetwork]["reward"];
-            }
-            Tools.logger.i(
-                "Banner: ${MopubHelper.bannerAdUnit}\nInter: ${MopubHelper.interAdUnit}\nReward: ${MopubHelper.rewardAdUnit}");
-
-            if (Ads.adNetwork == "ironsource") {
-              IronSourceHelper.IRONSOURCE_APP_KEY =
-                  values[Tools.packageInfo.packageName]["ads"][Ads.adNetwork]
-                      ["app_key"];
-            }
-            Tools.logger
-                .i("IrSource AppKey: ${IronSourceHelper.IRONSOURCE_APP_KEY}");
-          }
         } else {
           Tools.logger.e('Failed to load data');
+          articles.clear();
+          for (int i = 0; i < offlineArticles.length; i++) {
+            ContentModel item = new ContentModel(
+              title: offlineTitles[i],
+              imageUrl: "",
+              content: offlineArticles[i],
+            );
+            articles.add(item);
+          }
         }
       } on Exception catch (e) {
         Tools.logger.e('Failed to load data $e');
+        articles.clear();
+        for (int i = 0; i < offlineArticles.length; i++) {
+          ContentModel item = new ContentModel(
+            title: offlineTitles[i],
+            imageUrl: "",
+            content: offlineArticles[i],
+          );
+          articles.add(item);
+        }
       }
       // await Ads.init();
     }
